@@ -22,8 +22,8 @@ public final class BeanHelper {
 	static{
 		Set<Class<?>> beanClassSet = ClassHelper.getBeanClassSet();
 		for(Class<?> beanclass : beanClassSet){
-			Object obj = ReflectionUtil.newInstance(beanclass);
-			BEAN_MAP.put(beanclass, obj);
+			Object obj = ReflectionUtil.newInstance(beanclass);//实例化类
+			BEAN_MAP.put(beanclass, obj); //使用map创建一个类名与类实例的一个映射关系
 		}
 		//System.out.println("BEAN_MAP:"+BEAN_MAP.size());
 	}
